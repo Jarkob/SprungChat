@@ -1,13 +1,17 @@
 <?php
-$sql = "SELECT * FROM messages ORDER BY id DESC LIMIT 10";
+$sql = "SELECT * FROM messages ORDER BY id DESC LIMIT 20";
 
 require_once("config.php");
 require_once("sql.php");
-$results = sql::select($sql);
+$results = sql::exe($sql);
 
 if($results != null) {
-	foreach($results as $result) {
-		echo "\n". $result['username']. ": ". $result['content'];
+	for($i = sizeof($results) - 1; $i >= 0; $i--) {
+		?>
+		<div>
+			<?= $results[$i]['username']?>: <?=$results[$i]['content']?>
+		</div>
+		<?php
 	}
 }
 ?>
