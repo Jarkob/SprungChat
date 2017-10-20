@@ -35,13 +35,13 @@ require_once("templates/header.html");
 <form action="index.php" method="post">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-2">
+			<div class="col-sm-2 col-md-2">
 				<input class="form-control" type="text" name="username" placeholder="Name" value="<?=$username?>">
 			</div>
-			<div class="col-md-8">
+			<div class="col-sm-8 col-md-8">
 				<input class="form-control" type="text" name="content" placeholder="Nachricht">
 			</div>
-			<div class="col-md-2">
+			<div class="col-sm-2 col-md-2">
 				<button class="btn btn-default" onclick="loadMessages()">Posten</button>
 			</div>
 		</div>
