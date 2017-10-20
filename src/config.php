@@ -9,7 +9,7 @@ $dbconfig = array("local" => array(
 					"azure" => array(
 						"host" => "localhost;port=49925",
 						"username" => "azure",
-						"password" => "Iggibib!",// keine Ahnung
+						"password" => "6#vWHD_$",// keine Ahnung
 						"dbname" => "sprungchat"
 					)
 				);
