@@ -2,6 +2,9 @@
 
 require_once("src/config.php");
 
+require_once("src/log.php");
+log::logAccess();
+
 $username = "";
 if(isset($_POST['content'])){ 
 
