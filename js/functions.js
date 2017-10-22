@@ -60,3 +60,36 @@ window.onload = function() {
 		loadMessages();
 	}, 3000);
 };
+
+$(document).ready(function() {
+	/*
+	$.ajax({
+  url: "/api/getWeather",
+  data: {
+    zipcode: 97201
+  },
+  success: function( result ) {
+    $( "#weather-temp" ).html( "<strong>" + result + "</strong> degrees" );
+  }
+});
+	*/
+
+	/*
+	$("#content").change(function() {
+		var length = $("#content").val().length;
+		$("#charCount").html(length);
+	});
+	*/
+
+	$("#content").on("input", function() {
+		var length = $("#content").val().length;
+		$("#charCount").html(length);
+
+		if(length > 140) {
+			$("#charCount").css("color", "#f00");
+		} else {
+			$("#charCount").css("color", "#000");
+		}
+	});
+});
+

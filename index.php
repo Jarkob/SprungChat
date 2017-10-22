@@ -44,7 +44,8 @@ require_once("templates/header.html");
 				<input class="form-control" type="text" name="username" placeholder="Name" value="<?=$username?>">
 			</div>
 			<div class="col-sm-8 col-md-8">
-				<input class="form-control" type="text" name="content" placeholder="Nachricht">
+				<textarea class="form-control" rows="3" type="text" name="content" id="content" placeholder="Nachricht"></textarea>
+				<span id="charCount">0</span>
 			</div>
 			<div class="col-sm-2 col-md-2">
 				<button class="btn btn-default" onclick="loadMessages()">Posten</button>
