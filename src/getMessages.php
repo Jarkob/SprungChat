@@ -15,8 +15,6 @@ if($results != null) {
 		</div>
 		<?php
 	}
-} else {
-	echo "keine Ergebnisse";
 }
 
 ?>
