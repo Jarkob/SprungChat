@@ -5,6 +5,11 @@ require_once("src/config.php");
 require_once("src/log.php");
 log::logAccess();
 
+// Anzahl Nachrichten speichern
+require_once("src/messages.php");
+$numberOfMessages = messages::getNumberOfMessages();
+
+
 $username = "";
 if(isset($_POST['content'])){ 
 

@@ -1,8 +1,10 @@
 <?php
+
 $sql = "SELECT * FROM messages ORDER BY id DESC LIMIT 20";
 
+
 require_once("config.php");
-require_once("sql.php");
+
 $results = sql::exe($sql);
 
 if($results != null) {
@@ -13,5 +15,8 @@ if($results != null) {
 		</div>
 		<?php
 	}
+} else {
+	echo "keine Ergebnisse";
 }
+
 ?>

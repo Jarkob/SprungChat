@@ -1,4 +1,4 @@
-
+/*
 xmlhttp.onreadystatechange = function() {
 	if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 		document.getElementById("ajax_chat").innerHTML = xmlhttp.responseText;
@@ -40,6 +40,7 @@ function loadXMLDoc() {
 	xhttp.open("GET", "js/ajax/getLikes.php?id="+ id, true);
 	xhttp.send();
 }
+*/
 
 function loadMessages() {
 	var xhttp = new XMLHttpRequest();
@@ -48,6 +49,14 @@ function loadMessages() {
 			document.getElementById("messages").innerHTML = this.responseText;
 		}
 	};
-	xhttp.open("GET", "../src/getMessages.php");
+	xhttp.open("GET", "src/getMessages.php", true);
 	xhttp.send();
 }
+
+window.onload = function() {
+	setInterval(function() {
+		/*var test = "<?php echo $numberOfMessages ?>";
+		alert(test);*/
+		loadMessages();
+	}, 3000);
+};

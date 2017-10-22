@@ -14,7 +14,7 @@ $dbconfig = array("local" => array(
 					)
 				);
 
-require_once("src/sql.php");
+require_once("sql.php");
 
 // Wenn es eine lokale Verbindung ist, soll die lokale Datenbankverbindung genutzt werden, sonst die azure
 if($_SERVER['REMOTE_ADDR']=='127.0.0.1' || $_SERVER['REMOTE_ADDR'] == '::1') {
